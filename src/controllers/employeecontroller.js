@@ -14,3 +14,17 @@ exports.getEmployeeList = (req,res) =>{
     })
     
 }
+exports.getEmployeeByID= (req,res) =>{
+   Employee.getEmployeeByID(req.params.id, (err,employees)=>{
+    if(err)
+    res.send('err');
+    console.log('Employees',employees)
+    res.send(employees);
+
+
+   })    
+}
+
+exports.createNewEmployee = (req,res) =>{
+    console.log("Create new employee")
+}

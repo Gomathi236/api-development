@@ -2,8 +2,11 @@ const express =require('express');
 const router = express.Router();
 
 
- const employeeRouter = require("../controllers/employeecontroller");
+ const employeeController = require("../controllers/employeecontroller");
 
- router.get("/", employeeRouter.getEmployeeList);
+ router.get("/", employeeController.getEmployeeList);
+ router.get("/:id",employeeController.getEmployeeByID);
+ router.post("/",employeeController.createNewEmployee);
+ 
 
  module.exports = router;
