@@ -12,7 +12,7 @@ con.connect(function(err) {
     con.on('error', function(err) {
         console.log("[mysql error]",err);
       });
-  console.log("Connected!");
+  console.log("Database Connected!");
     });
 
 module.exports = con;
